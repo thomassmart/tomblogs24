@@ -17,9 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
-          lfs: false
           submodules: 'recursive'
+          lfs: false
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
