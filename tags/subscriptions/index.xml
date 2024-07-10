@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Subscriptions on Tom Blogs</title><link>https://tomsmart.au/tags/subscriptions/</link><description>Recent content in Subscriptions on Tom Blogs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tomsmart.au/tags/subscriptions/index.xml" rel="self" type="application/rss+xml"/><item><title>Everything as a Service</title><link>https://tomsmart.au/p/blog-aas/</link><pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate><guid>https://tomsmart.au/p/blog-aas/</guid><description>&lt;h1 id="subscriptions-are-king">Subscription&amp;rsquo;s are king
+&lt;/h1>&lt;p>&lt;img src="https://tomsmart.au/p/blog-aas/Subscriptions.png"
+width="306"
+height="398"
+srcset="https://tomsmart.au/p/blog-aas/Subscriptions_hu801eac24ef5ac068fa9f1d713ad7f983_192379_480x0_resize_box_3.png 480w, https://tomsmart.au/p/blog-aas/Subscriptions_hu801eac24ef5ac068fa9f1d713ad7f983_192379_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Subscriptions are kind"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="184px"
+>&lt;/p>
+&lt;p>It&amp;rsquo;s been a fundamental shift that&amp;rsquo;s occurred over the recent decades. Gone are the days of paying once for something, now we&amp;rsquo;re offered the opportunity to continually pay for things that we once owned outright. Sure, it&amp;rsquo;s not without benefits, but rarely do you now &amp;lsquo;own&amp;rsquo; a software license or &amp;lsquo;buy&amp;rsquo; a server.&lt;/p>
+&lt;p>Why the change to a renter&amp;rsquo;s market? There&amp;rsquo;s a few reason&amp;rsquo;s it&amp;rsquo;s occurred:&lt;/p>
+&lt;ul>
+&lt;li>Low, or no, initial CapEx&lt;/li>
+&lt;li>Predicable bills, based on consumption&lt;/li>
+&lt;li>Economies of scale for technology enablement&lt;/li>
+&lt;li>Shared responsibility, those best placed to manage the items are the ones tasked with the job.&lt;/li>
+&lt;li>New features are often included. The vendor can afford a development team to work on the product with their own predictable income.&lt;/li>
+&lt;li>Maintenance is often included, see above point.&lt;/li>
+&lt;li>The pricing can often be per user or per seat based. This can make it more competitive for the smaller and medium businesses. Large and Enterprise have the buying power of negotiation still.&lt;/li>
+&lt;li>Products can be split into multiple tiers or add-ons. Rather than having to pay for the entire product, you can software unlock additional features.&lt;/li>
+&lt;/ul>
+&lt;p>Aside from the market jargon, there is a wealth of technical features that can be unlocked. Teams can gain access to technology that was either beyond the capacity to setup and manager, or just plain too expensive.&lt;/p>
+&lt;p>Example, few organisation ran Skype for Business. Evolving from UCS -&amp;gt; Lync -&amp;gt; Skype for business the product team worked for years to try and land the technology into their customers premises, but it was too expensive. The servers required to run it were too complex and numerous, and the skill set required to administer and build sparse. The integration was there, the functionality was there, the marketing was there but it just never stuck.&lt;/p>
+&lt;p>Microsoft launched Teams (SaaS) and it has evolved to become on their best success stories. Recent information shows that they are at 230 million daily active users. 90% of the Fortune 500 have adopted it. During the COVID-19 pandemic, its growth has been rumoured to have caused availability constraints within Azure as the product was expanding quicker than hardware could be procured. Why? It cost nothing for existing subscriptions. Add-on&amp;rsquo;s were available to unlock greater functionality, setup was simple.&lt;/p>
+&lt;h1 id="what-in-the-aas">What in the aaS?
+&lt;/h1>&lt;p>Confusion sets in as the subscription model marketing takes flight. In an attempt to make the offering more understandable, a catchy phrase was needed. Software-as-a-Service (SaaS) initially paved the way. Rather than running databases, scoping sizing requirements and hosting application servers, why not leave all that hard work to the vendor? They run all the infrastructure that&amp;rsquo;s required to make run the app. Not only just the infrastructure, they are responsible for the entire stack. The customer responsibility was often limited to access, and data. You need to define who has access to what, and the data is stored in the correct location, and treated in alignment with organisational policy.&lt;/p>
+&lt;p>Great Success. We have take off. 🛫 Accountants initially gripe at the loss their standard Capex accounting methods, but the bill predictability and scalability take hold. Now what? Seeing the success of SaaS, vendors starting coining the idea, and extending the product offerings.&lt;/p>
+&lt;p>Infrastructure-as-a-Service, IaaS, was the next cab off the rank. Rather than buy expensive server hardware, arrange a secure and reliable data centre and manage hardware failures and warranties, IaaS was the answer! Vendors everywhere started to offer Virtual Machines that you could purchase. Pick a size, design a network, and away you go. Want backups? No problem we&amp;rsquo;ve got an add-on for that. Want replication, again - no problems, we&amp;rsquo;ve got an add-on. Sys Admins rejoice, as disk failures and capacity management become a battle scar of your IT career. A simple project no longer became the catalyst for a hardware refresh or procurement exercise. IaaS isn&amp;rsquo;t as easy going as SaaS however. It&amp;rsquo;s still on you to keep the OS/Apps up-to-date, ensure that the system is working well.&lt;/p>
+&lt;p>Seeing that these items are at different ends of a scale, its easy to understand why Platform-as-a-Service was derived. PaaS really unlocks organisation to focus on what they are good at, whilst still having the flexibility to run what they need. Need an SQL database, most businesses do - few business have a full time DBA though. Perhaps that database is relatively small, but still critical infrastructure. Suddenly an SQL farm, in multiple geo locations, and other requirements mean that this tiny DB is now costing thousands of dollars. PaaS allows you to have the flexibility to use consumption based pricing, and choose those items important to you. Because the vendor needs to setup the platform to cater to a wide range of scenarios, and the fact it will likely multitenant solution, they are able to unlock complex architecture for a fraction of the price. This flexibility is a testament to the economics of scale.&lt;/p>
+&lt;p>&lt;img src="https://tomsmart.au/p/blog-aas/SaaS-PaaS-IaaS.png"
+width="745"
+height="393"
+srcset="https://tomsmart.au/p/blog-aas/SaaS-PaaS-IaaS_hub33286f931be26eacf62b507582c8e78_212796_480x0_resize_box_3.png 480w, https://tomsmart.au/p/blog-aas/SaaS-PaaS-IaaS_hub33286f931be26eacf62b507582c8e78_212796_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Adid-aas"
+class="gallery-image"
+data-flex-grow="189"
+data-flex-basis="454px"
+>&lt;/p>
+&lt;h1 id="the-shared-responsibility-model">The shared responsibility model
+&lt;/h1>&lt;p>Microsoft have already written well about the responsibility by stakeholder against different as a service offerings. &lt;a class="link" href="https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility" target="_blank" rel="noopener"
+>Its a short read, but will really empower your understanding of who is responsible when&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://docs.microsoft.com/en-us/azure/security/fundamentals/media/shared-responsibility/shared-responsibility.svg"
+loading="lazy"
+alt="Shared Responsibility Model"
+>&lt;/p>
+&lt;h1 id="simple-please">Simple Please
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Acronym&lt;/th>
+&lt;th>Actual Model&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>SaaS&lt;/td>
+&lt;td>Software as a Service&lt;/td>
+&lt;td>Software that you purchase in an ongoing manner, most items are managed by the vendor&lt;/td>
+&lt;td>Office365, Sales Force, etc&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PaaS&lt;/td>
+&lt;td>Platform as a Service&lt;/td>
+&lt;td>Key components that you can consume, interact or program with. You&amp;rsquo;re not responsible for the management/maintenance of the platform/os, but the app that it may interact with&lt;/td>
+&lt;td>Azure SQL, Azure Functions&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IaaS&lt;/td>
+&lt;td>Infrastructure as a Service&lt;/td>
+&lt;td>Low level components, storage, computer, networks. You don&amp;rsquo;t worry about hardware, but that&amp;rsquo;s about it.&lt;/td>
+&lt;td>Azure Virtual Machines&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="where-to-from-here">Where to from here?
+&lt;/h1>&lt;p>There&amp;rsquo;s no doubt that more layers of cake will be added. The as-a-service model will undoubtedly, and is, expanding. Desktop-As-A-Service (DaaS) is already taking hold with the likes of Azure Virtual Desktop and W365 Cloud PC. Some service offerings will be a flash in the pan, but there&amp;rsquo;s the chance the next revolution is around the corner. Best to keep the eyes and mind open.&lt;/p>
+&lt;blockquote>
+&lt;p>Day 3 of 💯. Blog-As-A-Service.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;sup>97 (minus weekends) to go 💪&lt;/sup>&lt;/p>
+&lt;p>&lt;img src="https://media.giphy.com/media/3owypi5uX35d9Tobv2/giphy.gif"
+loading="lazy"
+alt="RIP Gottfried"
+>&lt;/p></description></item></channel></rss>

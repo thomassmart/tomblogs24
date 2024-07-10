@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Redundancy on Tom Blogs</title><link>https://tomsmart.au/tags/redundancy/</link><description>Recent content in Redundancy on Tom Blogs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tomsmart.au/tags/redundancy/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure Regions</title><link>https://tomsmart.au/p/azure-regions/</link><pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate><guid>https://tomsmart.au/p/azure-regions/</guid><description>&lt;img src="https://tomsmart.au/p/azure-regions/Regions.png" alt="Featured image of post Azure Regions" />&lt;h1 id="where-in-the-world">Where in the world!
+&lt;/h1>&lt;p>Before getting stuck into this post, if you&amp;rsquo;re reading this after April 22, it&amp;rsquo;s probably now out of date. Azure&amp;rsquo;s footprint is constantly expanding and being innovated upon.&lt;/p>
+&lt;p>Best to read the Microsoft documentation, or check out the &lt;a class="link" href="https://infrastructuremap.microsoft.com/explore" target="_blank" rel="noopener"
+>interactive global infrastructure map&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://tomsmart.au/p/azure-regions/Regions.png"
+width="1920"
+height="1080"
+srcset="https://tomsmart.au/p/azure-regions/Regions_hu00dd9af0fa4a1c3573f73bbf077fdf48_281787_480x0_resize_box_3.png 480w, https://tomsmart.au/p/azure-regions/Regions_hu00dd9af0fa4a1c3573f73bbf077fdf48_281787_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Azure region"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;p>Microsoft&amp;rsquo;s global azure reach is impressive. Microsoft boast that it has more global regions than any other cloud provider. The footprint is constantly evolving as the technologies are being aggressively adopted. What is also interesting is the exploration into other ways of providing these data centre&amp;rsquo;s. A favorite, and easy conversation starter, is their experiments into &lt;a class="link" href="https://news.microsoft.com/innovation-stories/project-natick-underwater-datacenter/" target="_blank" rel="noopener"
+>underwater data centres&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://tomsmart.au/p/azure-regions/Zones.png"
+width="1920"
+height="1080"
+srcset="https://tomsmart.au/p/azure-regions/Zones_hucec554647909b385b8da02da77017179_151588_480x0_resize_box_3.png 480w, https://tomsmart.au/p/azure-regions/Zones_hucec554647909b385b8da02da77017179_151588_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Azure region breakdowns"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;h2 id="availability-zone">Availability Zone
+&lt;/h2>&lt;p>Within an Azure region are availability zones. Each availability zone, sometimes referred to as AZ&amp;rsquo;s, is made up of one or more data centers that are powered, cooled, and networked independently. This is important as these az&amp;rsquo;s serve as an isolation boundary. If one zone fails, the other continues to function. High-speed, private fiber-optic networks connect the availability zones, this allows for most applications to access near real-time replication.&lt;/p>
+&lt;p>By co-locating your computing, storage, networking, and data resources inside a zone and replicating into other zones, availability zones can be used to operate mission-critical applications and embed high-availability into your application architecture. However, duplicating your services and transmitting data between zones may come at a cost.&lt;/p>
+&lt;h2 id="azure-regions">Azure Regions
+&lt;/h2>&lt;p>What&amp;rsquo;s a region? Simply, a geographically close collection of three availability zones. There are governing items that define a region, including a latency of less than 2ms between DCs as well as physical distance. It&amp;rsquo;s worthwhile noting that not all regions offer all services. As regions grow, and scale out, services are enabled. These regions allow apps and infrastructure to have a global or local presence as required.&lt;/p>
+&lt;p>When you deploy a resource, you&amp;rsquo;ll frequently be asked to choose the region in which you want the resource to be provisioned. You maybe asked to define redundancy, which I&amp;rsquo;ll cover off in another post, and this is where it&amp;rsquo;s important to understand these differences.&lt;/p>
+&lt;h3 id="special-regions">Special Regions
+&lt;/h3>&lt;p>Azure has specialised regions that you might want to use when you build out your applications for compliance or legal purposes. A few examples include:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>US DoD Central, US Gov Virginia, US Gov Iowa and more&lt;/strong>: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These data centers are operated by screened U.S. personnel and include additional compliance certifications.&lt;/li>
+&lt;li>&lt;strong>China East, China North, and more&lt;/strong>: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn&amp;rsquo;t directly maintain the data centers.&lt;/li>
+&lt;/ul>
+&lt;h2 id="region-pairs">Region Pairs
+&lt;/h2>&lt;p>One or more data centers are used to create availability zones. Within a single region, there&amp;rsquo;s at least three zones. A massive natural disaster could cause an outage large enough to affect perhaps two data centers. This is why Azure also creates region pairs.&lt;/p>
+&lt;p>Each Azure region will always be matched with another region with the same geography (such as the Australia, United States, Europe, or Asia) which is at least 500 kilometres away. This strategy enables for the replication of resources (such as VM storage) across a geography, which helps minimise the likelihood of interruptions caused by events such as natural disasters, civil unrest, power outages, or physical network outages that strike both locations at the same time. If one of the regions in a pair was hit by a natural disaster, for example, services would instantly failover to the other area in the pair.&lt;/p>
+&lt;p>You may use the pair of areas to provide reliable services and data redundancy because they are directly connected and far enough apart to be isolated from regional catastrophes. Using region pairings, several services provide automatic geo-redundant storage.&lt;/p>
+&lt;p>Also, If there is a widespread Azure outage, one region from each pair is prioritised to ensure that at least one region is restored as soon as practicable for applications hosted in that region pair. Microsoft also use the region pairs to minimise downtime and the possibility of application outages, planned Azure changes are rolled out to paired regions one area at a time.&lt;/p>
+&lt;h1 id="additional-resources">Additional Resources
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Style&lt;/th>
+&lt;th>Link&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Visual Learner&lt;/td>
+&lt;td>&lt;a class="link" href="https://www.youtube.com/watch?v=4nDRvZR2EjU" target="_blank" rel="noopener"
+>John Savill - Understanding Microsoft Azure Availability Zones!&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Auditory Learner&lt;/td>
+&lt;td>I don&amp;rsquo;t have anything for this one here yet.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Physical Learner&lt;/td>
+&lt;td>&lt;a class="link" href="https://microsoftlearning.github.io/AZ-900T0x-MicrosoftAzureFundamentals/Instructions/Walkthroughs/05-Create%20Blob%20storage.html" target="_blank" rel="noopener"
+>Play around with storage accounts&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Solitary Learner&lt;/td>
+&lt;td>&lt;a class="link" href="https://docs.microsoft.com/en-us/learn/modules/azure-architecture-fundamentals/regions-availability-zones" target="_blank" rel="noopener"
+>Read the microsoft learn module&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>Day 5 of 💯. Lost in space!&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;sup>95 (minus weekends) to go 💪&lt;/sup>&lt;/p>
+&lt;p>&lt;img src="https://media.giphy.com/media/9tA6H1madRvUc/giphy.gif"
+loading="lazy"
+alt="Azure has regions"
+>&lt;/p></description></item></channel></rss>
