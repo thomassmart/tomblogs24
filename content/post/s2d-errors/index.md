@@ -1,14 +1,16 @@
 ---
 title: S2D Storage Jobs Failing
-description: What do these error codes really mean?!
-slug: s2d-failing-jobs
+description: Error codes for common storage job failures
+slug: s2d-storage-job-errors
 date: 2018-07-21 00:00:00+0000
 categories:
     - Storage-Spaces-Direct(S2D)
 tags:
     - Storage-Spaces-Direct
-    - Virtual Disk
+    - Hyper-V
+    - Cache
     - S2D-Operations
+    - S2D-Errors
 ---
 
 From time to time, a Storage Spaces Direct (S2D) storage job, whether this is a Virtual Disk Repair, Physical Disk Removal or Storage Pool Rebalance/Optimization, will suspend or fail for some reason. When this happens, we need to understand why this is the case, and resolve if possible. Follow the steps below to sort it out.
