@@ -1,38 +1,32 @@
-# Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
-ARG NODE_VERSION=16
-FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
+# Go devcontainer base (includes Go toolchain + vscode user)
+#ARG GO_VARIANT="1-1.22-bookworm"
+#FROM mcr.microsoft.com/devcontainers/go:${GO_VARIANT}
+FROM mcr.microsoft.com/devcontainers/go:latest
 
-# VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
-ARG VARIANT=hugo
-# VERSION can be either 'latest' or a specific version number
-ARG VERSION=latest
+# Version of Hugo Extended to install – passed from devcontainer.json
+ARG HUGO_VERSION=0.124.1
+ARG TARGETARCH
 
-# Download Hugo
-RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
-    rm -rf /var/lib/apt/lists/* && \
-    case ${VERSION} in \
-    latest) \
-    export VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4)}') ;;\
+# Basic deps
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Hugo Extended (different .deb per arch)
+RUN case "${TARGETARCH:-amd64}" in \
+        "arm64")  ARCH="arm64" ;; \
+        "arm")    ARCH="armhf" ;; \
+        *)        ARCH="amd64" ;; \
     esac && \
-    echo ${VERSION} && \
-    case $(uname -m) in \
-    aarch64) \
-    export ARCH=ARM64 ;; \
-    *) \
-    export ARCH=64bit ;; \
-    esac && \
-    echo ${ARCH} && \
-    wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
-    tar xf ${VERSION}.tar.gz && \
-    mv hugo /usr/bin/hugo
+    curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb" \
+      -o /tmp/hugo_extended.deb && \
+    apt-get update && \
+    apt-get install -y /tmp/hugo_extended.deb && \
+    rm -rf /var/lib/apt/lists/* /tmp/hugo_extended.deb && \
+    hugo version
 
-# Hugo dev server port
-EXPOSE 1313
-
-# [Optional] Uncomment this section to install additional OS packages you may want.
-#
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-
-# [Optional] Uncomment if you want to install more global node packages
-# RUN sudo -u node npm install -g <your-package-list-here>
+# Default workdir when the container opens
+WORKDIR /workspaces/tomblogs24
