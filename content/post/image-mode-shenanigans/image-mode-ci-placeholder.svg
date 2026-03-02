@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">CI to ISO flow placeholder</title>
+  <desc id="desc">Source to build to registry to ISO artifact to endpoint flow.</desc>
+  <rect width="1200" height="420" fill="#f8fafc"/>
+  <text x="40" y="48" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">CI to artifact flow (placeholder)</text>
+
+  <rect x="50" y="100" width="220" height="84" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+  <text x="78" y="138" font-family="Arial, sans-serif" font-size="20" fill="#0c4a6e">Git commit / PR merge</text>
+  <text x="118" y="165" font-family="Arial, sans-serif" font-size="16" fill="#0c4a6e">source change</text>
+
+  <rect x="330" y="100" width="220" height="84" rx="8" fill="#dcfce7" stroke="#15803d"/>
+  <text x="385" y="138" font-family="Arial, sans-serif" font-size="20" fill="#14532d">CI build</text>
+  <text x="357" y="165" font-family="Arial, sans-serif" font-size="16" fill="#14532d">Containerfile -> image</text>
+
+  <rect x="610" y="100" width="220" height="84" rx="8" fill="#fef3c7" stroke="#b45309"/>
+  <text x="671" y="138" font-family="Arial, sans-serif" font-size="20" fill="#78350f">Registry</text>
+  <text x="646" y="165" font-family="Arial, sans-serif" font-size="16" fill="#78350f">latest + commit sha</text>
+
+  <rect x="890" y="100" width="260" height="84" rx="8" fill="#ede9fe" stroke="#6d28d9"/>
+  <text x="937" y="138" font-family="Arial, sans-serif" font-size="20" fill="#4c1d95">ISO build stage</text>
+  <text x="916" y="165" font-family="Arial, sans-serif" font-size="16" fill="#4c1d95">bootc-image-builder</text>
+
+  <rect x="330" y="260" width="220" height="96" rx="8" fill="#cffafe" stroke="#0e7490"/>
+  <text x="372" y="302" font-family="Arial, sans-serif" font-size="20" fill="#164e63">ISO artifact</text>
+  <text x="346" y="330" font-family="Arial, sans-serif" font-size="16" fill="#164e63">includes customization</text>
+
+  <rect x="650" y="260" width="260" height="96" rx="8" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="702" y="302" font-family="Arial, sans-serif" font-size="20" fill="#7f1d1d">Endpoint install</text>
+  <text x="692" y="330" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">boot into known version</text>
+
+  <line x1="270" y1="142" x2="330" y2="142" stroke="#334155" stroke-width="3"/>
+  <polygon points="330,142 320,136 320,148" fill="#334155"/>
+
+  <line x1="550" y1="142" x2="610" y2="142" stroke="#334155" stroke-width="3"/>
+  <polygon points="610,142 600,136 600,148" fill="#334155"/>
+
+  <line x1="830" y1="142" x2="890" y2="142" stroke="#334155" stroke-width="3"/>
+  <polygon points="890,142 880,136 880,148" fill="#334155"/>
+
+  <line x1="1000" y1="184" x2="790" y2="260" stroke="#334155" stroke-width="3"/>
+  <polygon points="790,260 801,251 805,262" fill="#334155"/>
+
+  <line x1="550" y1="308" x2="650" y2="308" stroke="#334155" stroke-width="3"/>
+  <polygon points="650,308 640,302 640,314" fill="#334155"/>
+
+  <text x="50" y="390" font-family="Arial, sans-serif" font-size="16" fill="#334155">Break-glass user and install settings can be injected during ISO build without hardcoding privileged credentials in the base image.</text>
+</svg>

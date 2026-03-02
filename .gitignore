@@ -3,3 +3,4 @@ resources
 .hugo_build.lock
 .vscode/ltex.dictionary.en-US.txt
 .vscode/ltex.hiddenFalsePositives.en-US.txt
+.DS_Store
