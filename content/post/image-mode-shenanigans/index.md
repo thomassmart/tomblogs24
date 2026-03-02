@@ -20,7 +20,7 @@ This post walks through __[image-mode-shenanigans](https://github.com/thomassmar
 
 ## In This Post
 
-![The SOE Dilemma](InThisPost-Header.png)
+![The SOE Dilemma - We treat endpoints like pets](InThisPost-Header.png)
 
 1. Why traditional SOE workflows become fragile at scale.
 2. What bootable containers actually are.
@@ -34,7 +34,7 @@ This post walks through __[image-mode-shenanigans](https://github.com/thomassmar
 
 ## The Problem: Endpoint Drift Becomes an Operations Tax
 
-![Endpoint drift problem](TheProblem-Header.png)
+![Endpoint drift problem - Everybody can fix everything, in a different unique way!](TheProblem-Header.png)
 
 Traditional SOE processes are familiar:
 
@@ -61,10 +61,10 @@ Now every incident starts with a forensic question: "what is this endpoint actua
 
 ### Why patch-forever models get expensive
 
-When state is mostly changeable (i.e. mutable), cost silently shifts from imaging and delivery to issue investigation and resolutions:
+When state is mostly changeable (i.e. mutable), cost silently shifts from imaging and delivery to issue investigation and resolution:
 
 - troubleshooting takes longer because baseline truth is fuzzy
-- support teams spend more time identifying an endpoint states
+- support teams spend more time identifying the state of an endpoint
 - rollout confidence drops, so patch velocity slows and increases in cost
 - rollback becomes political because state history is unclear
 
@@ -121,7 +121,7 @@ Lets let that sink in for a moment. Versioned and selected artifacts define the 
 
 ## Why Immutability and Atomicity Change the Risk Model
 
-![Immutability and atomicity](Immutability-Header.png)
+![Immutability and atomicity. Updates are all encompassing and state is locked and predictable](Immutability-Header.png)
 
 These terms are often used as slogans. They are most useful when treated as operational requirements, not desires.
 
@@ -165,15 +165,15 @@ The direct benefits are practical:
 - safer promotion
 - true comprehensive rollback capability
 
-Real-world architecture can still vary. Some teams will use VDI, some MDM-first models, some transactional distro approaches. But the target outcome should stay consistent: known state, controlled versions, and fast recovery.
+Real-world architecture can still vary. Some teams will use VDI, some MDM-first models, some transactional distro approaches. However, the target outcome should stay consistent: known state, controlled versions, and fast recovery.
 
 ---
 
 ## Why This Repo Is a Useful Example
 
-![Repo capability map older](Build-Header.png)
+![Building once from a contract, deploy only the build artifact.](Build-Header.png)
 
-Many organisations have adopted the atomic and immutable ideology, however this has primarily been achieved through process and proceedue. This example project is useful because it is concrete, not theoretical, proof that this ideology can be achieved through technical means, using components such as:
+Many organisations have adopted the atomic and immutable ideology, however this has primarily been achieved through process and procedure. This example project is useful because it is concrete, not theoretical, proof that this ideology can be achieved through technical means, using components such as:
 
 - OS behavior is defined in `Containerfile`.
 - CI builds and publishes `latest` plus commit SHA tags.
@@ -327,7 +327,7 @@ reboot
 
 ## Upgrade Timing and Risk Controls
 
-So you've now mastered building the artifact. No doubt your realising the benefits of have your own endpoint contract! Don't stop here. In fact most programs fail here, not in the build stage, but becayse governance is now 'handled by the AI super pipeline'. People make mistakes. Don't forget the history, principles and patterns that gave you operational stability before technical immutability and atomicity.
+So you've now mastered building the artifact. No doubt your realising the benefits of have your own endpoint contract! Don't stop here. In fact most programs fail here, not in the build stage, but because governance is now 'handled by the AI super pipeline'. People make mistakes. Don't forget the history, principles and patterns that gave you operational stability before technical immutability and atomicity.
 
 Use clear lanes:
 
@@ -351,7 +351,7 @@ Align windows with real operations:
 
 ## Alternatives and Where They Fit
 
-![Alternatives landscape](Alternatives-Header.png)
+![Alternatives landscape. VDI, MDM, Indefinite Patch, Transactional Linux.](Alternatives-Header.png)
 
 Image mode is one method, not the only one - I just happen to like it. Common alternatives remain valid, and should be evaluated against your own requirements:
 
@@ -364,7 +364,7 @@ Across these options, the strongest common pattern is still the same: reduce mut
 
 ## Where Image Mode Fits Best
 
-![Where image mode fits](ImageModeFits-Header.png)
+![Where image mode fits. Public facing or known use case devices](ImageModeFits-Header.png)
 
 Good use cases:
 
@@ -385,7 +385,7 @@ Balanced view: this is a high-leverage pattern for the right endpoint class, not
 
 ## Final Thoughts
 
-![Final thoughts](FinalThoughts-Header.png)
+![Final thoughts. Elevate your SOE to benefit from modern principles](FinalThoughts-Header.png)
 
 `image-mode-shenanigans` is useful demonstration because it turns architectural intent into testable operations:
 
@@ -394,7 +394,7 @@ Balanced view: this is a high-leverage pattern for the right endpoint class, not
 - deploy atomically
 - recover by known rollback path
 
-Many organisations with public facing, known workflow/purpose or mission critical endpoints should evalaute this concept.
+Many organisations with public facing, known workflow/purpose or mission critical endpoints should evaluate this concept.
 
 If you want to evaluate this concept honestly, fork it and run it against your real constraints:
 
